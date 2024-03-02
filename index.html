@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NATTO PRESETS</title>
-<link rel="stylesheet" href="css/index.css">
-<style>
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATTO PRESETS</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+    </style>
 </head>
+
 <body>
 
     <div class="top">
@@ -18,12 +20,13 @@
             <div class="menu-content">
                 <div class="blur-bg">
                 </div>
-<br><br>
+                <br><br>
                 <center>
-                    NATTO PRESETS v.1.0.0<br>
+                    NATTO PRESETS ver1.1.0(Beta)<br>
                     プリセットの再配布等は禁止です。<br><br>
                     ⇩ Follow Me ⇩<br><br>
-                    <a href="https://twitter.com/kyandyBGM" target="_blank"><img src="https://nattobgm.github.io/web/assets/img/icons/twitter-icon.png"
+                    <a href="https://twitter.com/kyandyBGM" target="_blank"><img
+                            src="https://nattobgm.github.io/web/assets/img/icons/twitter-icon.png"
                             class="icon2"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="https://soundcloud.com/natto-kyandy-bgm" target="_blank"><img
                             src="https://nattobgm.github.io/web/assets/img/icons/soundclound-icon.svg"
@@ -40,233 +43,263 @@
 
 
 
-<div style="padding: 5px;"></div>
-        <center>NATTO PRESETS</center><div style="padding: 2px;"></div>
-<div class="mainbox">
-<div class="filter-controls">
-    <select id="genre-filter" onchange="applyFilters()">
-        <option value="">ジャンル</option>
-        <option value="kawaii">Kawaii</option>
-        <option value="futurebass">Future Bass</option>
-        <option value="ambient">Ambient</option>
-        <!-- Add more genre options as needed -->
-    </select>
-    <select id="type-filter" onchange="applyFilters()">
-        <option value="">楽器</option>
-        <option value="pluck">Pluck</option>
-        <option value="pad">Pad</option>
-        <option value="lead">Lead</option>
-        <option value="bass">Bass</option>
-        <option value="fx">FX</option>
-        <!-- Add more type options as needed -->
-    </select>
-
-    <select id="pack-filter" onchange="applyFilters()">
-        <option value="">パック</option>
-        <option value="natto_future_bass_pack1">NATTO FUTURE BASS PACK1</option>
-        <!-- Add more pack options as needed -->
-    </select><br>
-    <input type="text" id="title-filter" oninput="applyFilters()" placeholder="テキスト検索"><br>
-
-</div>
-<p id="filtered-count" style="position: absolute;"></p> <!-- ここに絞り込まれた結果の数を表示する -->
-<button onclick="resetFilters()" style="margin-left: 297px;padding-top10px: 40px;margin-bottom: 3px;">Reset</button><br>
-</div>
+        <div style="padding: 5px;"></div>
+        <center>NATTO PRESETS</center>
+        <div style="padding: 2px;"></div>
+        <div class="mainbox">
 
 
-<div class="playlist">
-    <div class="song" data-genre="kawaii" data-type="pluck" data-pack="natto_future_bass_pack1">
-        <div class="controls">
-            <button class="playPause" data-index="0">Play</button>
-            <img src="packs/1.png" width="35px" height="35px">
-            <h3 class="song-title">NATTO_PL_Star</h3>
-            <a href="https://cdn.discordapp.com/attachments/1212957301720227910/1212959527893205042/NATTO_PL_Star.vital?ex=65f3bb97&is=65e14697&hm=d4271a5647bc48eff08809bb6a6807fa44918232ee902e98e1d28a26773f5146&">Download</a>
+
+
+            <details open><summary>検索フィルター</summary>
+            <div class="filter-controls">
+                <select id="genre-filter" onchange="applyFilters()">
+                    <option value="">ジャンル</option>
+                    <option value="kawaii">Kawaii</option>
+                    <option value="futurebass">Future Bass</option>
+                    <option value="ambient">Ambient</option>
+                    <!-- 追加用 -->
+                </select>
+                <select id="type-filter" onchange="applyFilters()">
+                    <option value="">楽器</option>
+                    <option value="pluck">Pluck</option>
+                    <option value="pad">Pad</option>
+                    <option value="lead">Lead</option>
+                    <option value="bass">Bass</option>
+                    <option value="fx">FX</option>
+                    <!-- 追加用 -->
+                </select>
+
+                <select id="pack-filter" onchange="applyFilters()">
+                    <option value="">パック</option>
+                    <option value="natto_future_bass_pack1">NATTO FUTURE BASS PACK1</option>
+                    <!-- 追加用 -->
+                </select><br>
+                <input type="text" id="title-filter" oninput="applyFilters()" placeholder="テキスト検索"><br>
+
+
+            </div>            </details><div class="padding"></div>
+            <p id="filtered-count" style="position: absolute;"></p>
+            <button onclick="resetFilters()"
+                style="margin-left: 297px;padding-top10px: 40px;margin-bottom: 3px;">Reset</button><br>
+                
         </div>
-        <audio src="previews/1.mp3"></audio>
-    </div>
 
-    <div class="song" data-genre="futurebass" data-type="pad" data-pack="natto_future_bass_pack1">
-        <div class="controls">
-            <button class="playPause" data-index="1">Play</button>
-            <img src="packs/1.png" width="35px" height="35px">
-            <h3 class="song-title">NATTO_PAD_Supersaw1</h3>
-            <a href="https://cdn.discordapp.com/attachments/1212957301720227910/1212959289774313502/NATTO_PAD_Supersaw1.vital?ex=65f3bb5e&is=65e1465e&hm=8878ac73a19adfa791ab640dff1ddee94133fc8e9aae75b162b4b2050492222c&">Download</a>
+
+
+
+        <!-- プリセットたち -->
+        <div class="playlist">
+            <div class="song" data-genre="kawaii" data-type="pluck" data-pack="natto_future_bass_pack1">
+                <div class="controls">
+                    <button class="playPause" data-index="0">Play</button>
+                    <img src="packs/1.png" width="35px" height="35px">
+                    <h3 class="song-title">NATTO_PL_Star</h3>
+                    <a
+                        href="https://cdn.discordapp.com/attachments/1212957301720227910/1212959527893205042/NATTO_PL_Star.vital?ex=65f3bb97&is=65e14697&hm=d4271a5647bc48eff08809bb6a6807fa44918232ee902e98e1d28a26773f5146&">Download</a>
+                </div>
+                <audio src="previews/1.mp3"></audio>
+            </div>
+
+            <div class="song" data-genre="futurebass" data-type="pad" data-pack="natto_future_bass_pack1">
+                <div class="controls">
+                    <button class="playPause" data-index="1">Play</button>
+                    <img src="packs/1.png" width="35px" height="35px">
+                    <h3 class="song-title">NATTO_PAD_Supersaw1</h3>
+                    <a
+                        href="https://cdn.discordapp.com/attachments/1212957301720227910/1212959289774313502/NATTO_PAD_Supersaw1.vital?ex=65f3bb5e&is=65e1465e&hm=8878ac73a19adfa791ab640dff1ddee94133fc8e9aae75b162b4b2050492222c&">Download</a>
+                </div>
+                <audio src="previews/2.mp3"></audio>
+            </div>
+
+            <div class="song" data-genre="kawaii" data-type="pluck" data-pack="natto_future_bass_pack1">
+                <div class="controls">
+                    <button class="playPause" data-index="2">Play</button>
+                    <img src="packs/1.png" width="35px" height="35px">
+                    <h3 class="song-title">NATTO_PL_Glass</h3>
+                    <a
+                        href="https://cdn.discordapp.com/attachments/1212957301720227910/1212968521252732949/NATTO_PL_Glass.vital?ex=65f3c3f7&is=65e14ef7&hm=7b079c8cfff3f1c42d8333ecbc0f2923d5a6f4b25122f75d724b631b19a29996&">Download</a>
+                </div>
+                <audio src="previews/3.mp3"></audio>
+            </div>
+
+            <div class="song" data-genre="kawaii" data-type="pluck" data-pack="natto_future_bass_pack1">
+                <div class="controls">
+                    <button class="playPause" data-index="3">Play</button>
+                    <img src="packs/1.png" width="35px" height="35px">
+                    <h3 class="song-title">NATTO_PL_Wood</h3>
+                    <a
+                        href="https://cdn.discordapp.com/attachments/1212957301720227910/1212968717248364574/NATTO_PL_Wood.vital?ex=65f3c426&is=65e14f26&hm=9e67c3e00bc7cdd351c11c483c68fd6b1cf745fad69113921e02939750e09228&">Download</a>
+                </div>
+                <audio src="previews/4.mp3"></audio>
+            </div>
+
+            <div class="song" data-genre="kawaii" data-type="pluck" data-pack="natto_future_bass_pack1">
+                <div class="controls">
+                    <button class="playPause" data-index="4">Play</button>
+                    <img src="packs/1.png" width="35px" height="35px">
+                    <h3 class="song-title">NATTO_PL_Square</h3>
+                    <a
+                        href="https://cdn.discordapp.com/attachments/1212957301720227910/1212968891068719144/NATTO_PL_Square.vital?ex=65f3c44f&is=65e14f4f&hm=7e8bf8f8fc41f42cb1894d35eb3d0eb95672f7baddd96627311b3491a1b878c8&">Download</a>
+                </div>
+                <audio src="previews/5.mp3"></audio>
+            </div>
+            <div class="song" data-genre="kawaii" data-type="pluck" data-pack="natto_future_bass_pack1">
+                <div class="controls">
+                    <button class="playPause" data-index="5">Play</button>
+                    <img src="packs/1.png" width="35px" height="35px">
+                    <h3 class="song-title">NATTO_PL_Glockenspiel</h3>
+                    <a
+                        href="https://cdn.discordapp.com/attachments/1212957301720227910/1212969126444924968/NATTO_PL_Glockenspiel.vital?ex=65f3c487&is=65e14f87&hm=30f70d573f5c9bfd0dfbfc24de0497b3bbc42ccd390c2b8a7fa3f2564ff72cfb&">Download</a>
+                </div>
+                <audio src="previews/6.mp3"></audio>
+            </div>
+            <div class="song" data-genre="kawaii" data-type="pluck" data-pack="natto_future_bass_pack1">
+                <div class="controls">
+                    <button class="playPause" data-index="6">Play</button>
+                    <img src="packs/1.png" width="35px" height="35px">
+                    <h3 class="song-title">NATTO_PL_Music_Box</h3>
+                    <a
+                        href="https://cdn.discordapp.com/attachments/1212957301720227910/1212965406428635146/NATTO_PL_Music_Box.vital?ex=65f3c110&is=65e14c10&hm=b441f0c9a654148ce80800068f34cc6e0e14e5d1b21a19c6d5310f85c11ce0c1&">Download</a>
+                </div>
+                <audio src="previews/7.mp3"></audio>
+            </div>
+            <div class="song" data-genre="futurebass" data-type="pluck" data-pack="natto_future_bass_pack1">
+                <div class="controls">
+                    <button class="playPause" data-index="7">Play</button>
+                    <img src="packs/1.png" width="35px" height="35px">
+                    <h3 class="song-title">NATTO_PL_Saw</h3>
+                    <a
+                        href="https://cdn.discordapp.com/attachments/1212957301720227910/1212967419681833022/NATTO_PL_Saw.vital?ex=65f3c2f0&is=65e14df0&hm=cf7fe4f60239d0d2665cd7984049c2e3dcd9c64df38cbe31beca31c959b21bf3&">Download</a>
+                </div>
+                <audio src="previews/8.mp3"></audio>
+            </div>
+            <div class="song" data-genre="futurebass" data-type="pad" data-pack="natto_future_bass_pack1">
+                <div class="controls">
+                    <button class="playPause" data-index="8">Play</button>
+                    <img src="packs/1.png" width="35px" height="35px">
+                    <h3 class="song-title">NATTO_PAD_Howan1</h3>
+                    <a
+                        href="https://cdn.discordapp.com/attachments/1212957301720227910/1213138624695111740/NATTO_PAD_Howan1.vital?ex=65f46263&is=65e1ed63&hm=33e619cb338d40a1dfcc87b0bfffe3159de7abdaaa1611ad420d8f24575b51ab&">Download</a>
+                </div>
+                <audio src="previews/9.mp3"></audio>
+            </div>
+
         </div>
-        <audio src="previews/2.mp3"></audio>
-    </div>
 
-    <div class="song" data-genre="kawaii" data-type="pluck" data-pack="natto_future_bass_pack1">
-        <div class="controls">
-            <button class="playPause" data-index="2">Play</button>
-            <img src="packs/1.png" width="35px" height="35px">
-            <h3 class="song-title">NATTO_PL_Glass</h3>
-            <a href="https://cdn.discordapp.com/attachments/1212957301720227910/1212968521252732949/NATTO_PL_Glass.vital?ex=65f3c3f7&is=65e14ef7&hm=7b079c8cfff3f1c42d8333ecbc0f2923d5a6f4b25122f75d724b631b19a29996&">Download</a>
-        </div>
-        <audio src="previews/3.mp3"></audio>
-    </div>
+        <script>
 
-    <div class="song" data-genre="kawaii" data-type="pluck" data-pack="natto_future_bass_pack1">
-        <div class="controls">
-            <button class="playPause" data-index="3">Play</button>
-            <img src="packs/1.png" width="35px" height="35px">
-            <h3 class="song-title">NATTO_PL_Wood</h3>
-            <a href="https://cdn.discordapp.com/attachments/1212957301720227910/1212968717248364574/NATTO_PL_Wood.vital?ex=65f3c426&is=65e14f26&hm=9e67c3e00bc7cdd351c11c483c68fd6b1cf745fad69113921e02939750e09228&">Download</a>
-        </div>
-        <audio src="previews/4.mp3"></audio>
-    </div>
+            const songs = document.querySelectorAll('audio');
+            const playPauseButtons = document.querySelectorAll('.playPause');
+            let currentPlayingIndex = -1;
 
-    <div class="song" data-genre="kawaii" data-type="pluck" data-pack="natto_future_bass_pack1">
-        <div class="controls">
-            <button class="playPause" data-index="4">Play</button>
-            <img src="packs/1.png" width="35px" height="35px">
-            <h3 class="song-title">NATTO_PL_Square</h3>
-            <a href="https://cdn.discordapp.com/attachments/1212957301720227910/1212968891068719144/NATTO_PL_Square.vital?ex=65f3c44f&is=65e14f4f&hm=7e8bf8f8fc41f42cb1894d35eb3d0eb95672f7baddd96627311b3491a1b878c8&">Download</a>
-        </div>
-        <audio src="previews/5.mp3"></audio>
-    </div>
-    <div class="song" data-genre="kawaii" data-type="pluck" data-pack="natto_future_bass_pack1">
-        <div class="controls">
-            <button class="playPause" data-index="5">Play</button>
-            <img src="packs/1.png" width="35px" height="35px">
-            <h3 class="song-title">NATTO_PL_Glockenspiel</h3>
-            <a href="https://cdn.discordapp.com/attachments/1212957301720227910/1212969126444924968/NATTO_PL_Glockenspiel.vital?ex=65f3c487&is=65e14f87&hm=30f70d573f5c9bfd0dfbfc24de0497b3bbc42ccd390c2b8a7fa3f2564ff72cfb&">Download</a>
-        </div>
-        <audio src="previews/6.mp3"></audio>
-    </div>
-    <div class="song" data-genre="kawaii" data-type="pluck" data-pack="natto_future_bass_pack1">
-        <div class="controls">
-            <button class="playPause" data-index="6">Play</button>
-            <img src="packs/1.png" width="35px" height="35px">
-            <h3 class="song-title">NATTO_PL_Music_Box</h3>
-            <a href="https://cdn.discordapp.com/attachments/1212957301720227910/1212965406428635146/NATTO_PL_Music_Box.vital?ex=65f3c110&is=65e14c10&hm=b441f0c9a654148ce80800068f34cc6e0e14e5d1b21a19c6d5310f85c11ce0c1&">Download</a>
-        </div>
-        <audio src="previews/7.mp3"></audio>
-    </div>
-    <div class="song" data-genre="futurebass" data-type="pluck" data-pack="natto_future_bass_pack1">
-        <div class="controls">
-            <button class="playPause" data-index="7">Play</button>
-            <img src="packs/1.png" width="35px" height="35px">
-            <h3 class="song-title">NATTO_PL_Saw</h3>
-            <a href="https://cdn.discordapp.com/attachments/1212957301720227910/1212967419681833022/NATTO_PL_Saw.vital?ex=65f3c2f0&is=65e14df0&hm=cf7fe4f60239d0d2665cd7984049c2e3dcd9c64df38cbe31beca31c959b21bf3&">Download</a>
-        </div>
-        <audio src="previews/8.mp3"></audio>
-    </div>
+            playPauseButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const index = button.getAttribute('data-index');
+                    const song = songs[index];
 
-</div>
+                    if (index == currentPlayingIndex) {
+                        if (song.paused) {
+                            song.play();
+                            button.textContent = 'Pause';
+                        } else {
+                            song.pause();
+                            button.textContent = 'Play';
+                        }
+                    } else {
+                        songs.forEach(song => {
+                            song.pause();
+                            song.currentTime = 0;
+                        });
+                        song.play();
+                        button.textContent = 'Pause';
 
-<script>
+                        // Update the previous play/pause button if there was any
+                        if (currentPlayingIndex >= 0) {
+                            playPauseButtons[currentPlayingIndex].textContent = 'Play';
+                        }
 
-const songs = document.querySelectorAll('audio');
-    const playPauseButtons = document.querySelectorAll('.playPause');
-    let currentPlayingIndex = -1;
-
-    playPauseButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const index = button.getAttribute('data-index');
-            const song = songs[index];
-
-            if (index == currentPlayingIndex) {
-                if (song.paused) {
-                    song.play();
-                    button.textContent = 'Pause';
-                } else {
-                    song.pause();
-                    button.textContent = 'Play';
-                }
-            } else {
-                songs.forEach(song => {
-                    song.pause();
-                    song.currentTime = 0;
+                        currentPlayingIndex = index;
+                    }
                 });
-                song.play();
-                button.textContent = 'Pause';
+            });
 
-                // Update the previous play/pause button if there was any
-                if (currentPlayingIndex >= 0) {
+            songs.forEach(song => {
+                song.addEventListener('ended', () => {
                     playPauseButtons[currentPlayingIndex].textContent = 'Play';
+                    currentPlayingIndex = -1;
+                });
+            });
+
+            const downloadButtons = document.querySelectorAll('.download');
+            downloadButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const url = button.getAttribute('data-url');
+                    window.open(url, '_blank');
+                });
+            });
+
+            const applyFilters = () => {
+                const genre = document.getElementById('genre-filter').value;
+                const type = document.getElementById('type-filter').value;
+                const pack = document.getElementById('pack-filter').value;
+                const title = document.getElementById('title-filter').value.trim().toLowerCase();
+
+                const allSongs = document.querySelectorAll('.song');
+
+                allSongs.forEach(song => {
+                    song.style.display = 'none';
+                });
+
+                let filteredSongs = Array.from(allSongs);
+
+                if (genre) {
+                    filteredSongs = filteredSongs.filter(song => song.dataset.genre.includes(genre));
                 }
 
-                currentPlayingIndex = index;
-            }
-        });
-    });
+                if (type) {
+                    filteredSongs = filteredSongs.filter(song => song.dataset.type.includes(type));
+                }
 
-    songs.forEach(song => {
-        song.addEventListener('ended', () => {
-            playPauseButtons[currentPlayingIndex].textContent = 'Play';
-            currentPlayingIndex = -1;
-        });
-    });
+                if (pack) {
+                    filteredSongs = filteredSongs.filter(song => song.dataset.pack === pack);
+                }
 
-    const downloadButtons = document.querySelectorAll('.download');
-    downloadButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const url = button.getAttribute('data-url');
-            window.open(url, '_blank');
-        });
-    });
+                if (title) {
+                    filteredSongs = filteredSongs.filter(song => song.querySelector('.song-title').textContent.trim().toLowerCase().includes(title));
+                }
 
-    const applyFilters = () => {
-        const genre = document.getElementById('genre-filter').value;
-        const type = document.getElementById('type-filter').value;
-        const pack = document.getElementById('pack-filter').value;
-        const title = document.getElementById('title-filter').value.trim().toLowerCase();
+                filteredSongs.forEach(song => {
+                    song.style.display = 'flex';
+                });
 
-        const allSongs = document.querySelectorAll('.song');
+                updateFilteredCount(filteredSongs.length);
+            };
 
-        allSongs.forEach(song => {
-            song.style.display = 'none';
-        });
+            const updateFilteredCount = (count) => {
+                const resultCountElement = document.getElementById('filtered-count');
+                if (count === 0) {
+                    resultCountElement.textContent = "No results found.";
+                } else {
+                    resultCountElement.textContent = `${count} results`;
+                }
+            };
 
-        let filteredSongs = Array.from(allSongs);
+            const resetFilters = () => {
+                const allSongs = document.querySelectorAll('.song');
+                allSongs.forEach(song => {
+                    song.style.display = 'flex';
+                });
+                document.getElementById('genre-filter').value = '';
+                document.getElementById('type-filter').value = '';
+                document.getElementById('pack-filter').value = '';
+                document.getElementById('title-filter').value = '';
+                updateFilteredCount(allSongs.length);
+            };
 
-        if (genre) {
-            filteredSongs = filteredSongs.filter(song => song.dataset.genre.includes(genre));
-        }
-
-        if (type) {
-            filteredSongs = filteredSongs.filter(song => song.dataset.type.includes(type));
-        }
-
-        if (pack) {
-            filteredSongs = filteredSongs.filter(song => song.dataset.pack === pack);
-        }
-
-        if (title) {
-            filteredSongs = filteredSongs.filter(song => song.querySelector('.song-title').textContent.trim().toLowerCase().includes(title));
-        }
-
-        filteredSongs.forEach(song => {
-            song.style.display = 'flex';
-        });
-
-        updateFilteredCount(filteredSongs.length);
-    };
-
-    const updateFilteredCount = (count) => {
-        const resultCountElement = document.getElementById('filtered-count');
-        if (count === 0) {
-            resultCountElement.textContent = "No results found.";
-        } else {
-            resultCountElement.textContent = `${count} results`;
-        }
-    };
-
-    const resetFilters = () => {
-        const allSongs = document.querySelectorAll('.song');
-        allSongs.forEach(song => {
-            song.style.display = 'flex';
-        });
-        document.getElementById('genre-filter').value = '';
-        document.getElementById('type-filter').value = '';
-        document.getElementById('pack-filter').value = '';
-        document.getElementById('title-filter').value = '';
-        updateFilteredCount(allSongs.length);
-    };
-
-    window.onload = () => {
-        resetFilters();
-    };
+            window.onload = () => {
+                resetFilters();
+            };
 
 
 
@@ -278,9 +311,7 @@ const songs = document.querySelectorAll('audio');
 
 
 
-
-
-
-</script>
+        </script>
 </body>
+
 </html>

@@ -113,6 +113,7 @@ button:active {
     z-index: 80;
     background-color: rgba(0, 0, 0, 0.406);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     transition: .6s;
 }
 
@@ -192,7 +193,7 @@ input#title-filter {
     border-radius: 12px;
     margin: 3px 0px;
     border: 1px solid #7b7b7b;
-    width: 343px;
+    width: 329px;
 }
 
 .controls a {
@@ -214,4 +215,37 @@ input#title-filter {
     opacity: 0.5;
     filter: brightness(2);
     transition: .1s;
-    }
+}
+summary {
+    cursor: pointer;
+    background: #ffffff26;
+    font-size: 14px;
+    text-align: center;
+    padding: 3px;
+    border: 1px solid #ffffff45;
+    color: white;
+    user-select: none;
+    transition: .2s;
+}
+
+summary:active {
+    opacity: 0.5;
+    transition: .2s;
+}
+
+.padding {
+    margin-bottom: 3px;
+}
+
+.filter-controls {
+    background: #95caff26;
+    padding: 6px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border: 1px solid #ffffff45;
+    border-top: none;
+}
+.pagination button:disabled {
+    opacity: 0.2 !important;
+    pointer-events: none;
+}
